@@ -15,6 +15,7 @@ function addFileWith500Lines() {
 function commitFile() {
     exec('git add file.txt');
     exec('git commit -m "Added file.txt"');
+    exec('git push origin master');
 }
 
 // Function to remove the file
