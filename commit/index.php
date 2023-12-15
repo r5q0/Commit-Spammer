@@ -6,7 +6,7 @@ function addFileWith500Lines() {
     $filename = 'file.txt';
     $file = fopen($filename, 'w');
     for ($i = 1; $i <= 500; $i++) {
-        fwrite($file, "w\n");
+        fwrite($file, "Line $i\n");
     }
     fclose($file);
 }
@@ -24,8 +24,8 @@ function removeFile() {
 }
 
 // Function to run the script in a loop with a delay
-function runScriptInLoop($delayInSeconds) {
-    while(true) {
+function runScriptInLoop($loopCount, $delayInSeconds) {
+    for ($i = 1; $i <= $loopCount; $i++) {
         addFileWith500Lines();
         commitFile();
         removeFile();
@@ -35,5 +35,5 @@ function runScriptInLoop($delayInSeconds) {
 }
 
 // Run the script in a loop with a delay of 5 seconds between each step
-runScriptInLoop(3);
+runScriptInLoop(10, 5);
 ?>
