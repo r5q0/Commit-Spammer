@@ -11,7 +11,7 @@ This script is designed to add a file with 500 lines, commit it, push it to the 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/commit-spammer.git
+    git clone https://github.com/r5q0/commit-spammer.git
     ```
 
 2. Navigate to the project directory:
